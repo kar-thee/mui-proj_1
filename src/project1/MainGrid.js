@@ -11,21 +11,18 @@ const useStyles = makeStyles((theme)=>({
         backgroundPosition:'center center',
         padding:'15px'
         },
-    mainMsg:{
-        
-    }
+   
 }));
 export default function MainGrid(){
     const classes=useStyles()
     return(
         <>
         <Grid container className={classes.mainSub}>
-            <Grid item className={classes.mainMsg}>
+            <Grid item fluid>
                 <Typography component='h2' variant='h5'>
                     Hello Folks!
                 </Typography>
-                <Typography variant='body1'>
-                    You can code Your First Web Project in 90 Days .Learn with Industry Qualified Professionals...
+                <Typography component='h2' variant='body1' paragraph>You can code Your First Web Project in 90 Days .Learn with Industry Qualified Professionals...
                 </Typography>
             </Grid>
         </Grid>
