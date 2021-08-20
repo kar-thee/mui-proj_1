@@ -1,22 +1,25 @@
 import React from "react"
-import {Grid, Typography} from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles";
+import {Grid
+    // , 
+    // Typography
+} from "@material-ui/core"
+// import { makeStyles } from "@material-ui/core/styles";
 import MainGrid from "./MainGrid"
 import CardGrid from "./CardGrid"
-const useStyles = makeStyles((theme) => ({
-    lgitem:{
-        backgroundColor:'grey'
-    },
-    mditem:{
-        backgroundColor:'green'
-    },
-    smitem:{
-        backgroundColor:'aqua'
-    }
-}));
+// const useStyles = makeStyles((theme) => ({
+//     lgitem:{
+//         backgroundColor:'grey'
+//     },
+//     mditem:{
+//         backgroundColor:'green'
+//     },
+//     smitem:{
+//         backgroundColor:'aqua'
+//     }
+// }));
 
 export default  function MainContent(){
-    const classes=useStyles();
+    // const classes=useStyles();
     return(
         
         <Grid container  spacing={3}>
