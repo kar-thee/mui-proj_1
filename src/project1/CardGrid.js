@@ -48,6 +48,7 @@ export default function CardGrid(props){
                     <AddShoppingCartIcon/>
                 </IconButton>
                 }
+            
             />
 
             <CardMedia

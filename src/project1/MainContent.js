@@ -60,10 +60,11 @@ export default  function MainContent(){
             <Grid container spacing={3} style={{marginTop:'2%'}}>
                      {info.map( ({title,subheader,image,imgtitle,desc}) => {
                     return(
-                        <Grid item xs={12} sm={6} md={4} 
-                        alignItems="stretch"
+                        <Grid item xs={12} sm={6} md={4}  key={subheader}
+                        // alignItems="stretch"
                         >
                         <CardGrid
+                           
                             title={title}
                             subheader={subheader}
                             image={image}
