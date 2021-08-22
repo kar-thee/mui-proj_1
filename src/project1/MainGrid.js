@@ -9,7 +9,9 @@ const useStyles = makeStyles((theme)=>({
         backgroundImage: "url(https://cdn.pixabay.com/photo/2017/10/30/18/44/hacking-2903156_1280.jpg)",
         color:theme.palette.common.white,
         backgroundPosition:'center center',
-        padding:'15px'
+        padding:'15px',
+        marginTop:theme.spacing(2)
+
         },
         mainItem:{
             textAlign:'left',

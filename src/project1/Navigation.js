@@ -111,11 +111,11 @@ export default function NavigationBar() {
 
     return(
         <>
-         <Container>
+         {/* <Container> */}
         <AppBar position='static'>
         {mobileView?<MobileView/>:<DesktopView/>}
         </AppBar>
-        </Container>
+        {/* </Container> */}
        </>
     );
 }
