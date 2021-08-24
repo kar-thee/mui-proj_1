@@ -5,8 +5,7 @@ import ArrowForwardOutlinedIcon from '@material-ui/icons/ArrowForwardOutlined';
 
 import { makeStyles } from "@material-ui/core/styles";
 
-// import info from "./info.json"
-// console.log(info)
+
 const useStyles = makeStyles( (theme) => ({
     root: {
         // [theme.breakpoints.down('md')]:{
