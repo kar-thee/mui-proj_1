@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Typography,Toolbar, Link, Box,AppBar, Drawer } from '@material-ui/core';
+import { Typography,Toolbar, Link, Box,AppBar, Drawer, MenuItem } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -113,15 +113,17 @@ export default function NavigationBar() {
                     onClose={handleDrawer}>
                         {["home","courses","sign_up"].map((drawermenu) => {
                             return (
-                            <Link 
-                                key={drawermenu}
-                                component="button"
-                                variant="body1"
-                                className={classes.menuitems}
-                                color='inherit'
-                                >
-                                {drawermenu.toUpperCase()}
-                             </Link>);
+                                <Box>
+                                    <MenuItem 
+                                        key={drawermenu}
+                                        component="button"
+                                        variant="body1"
+                                        // className={classes.menuitems}
+                                        >
+                                        {drawermenu.toUpperCase()}
+                                    </MenuItem>
+                                </Box>
+                            );
                         })}
                 </Drawer>
             </Toolbar>
