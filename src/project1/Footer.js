@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
                 <Typography variant='subtitle1' color='textSecondary' className={classes.footerItem}>
                 😍Built with Material-Ui
                 </Typography>
-              <span className={classes.footerItem}>  {"Copyrights @"+" " +new Date().getFullYear() } </span>
+              <span className={classes.footerItem}>Copyrights @  {new Date().getFullYear()} </span>
             </Paper>
             
         </footer>
