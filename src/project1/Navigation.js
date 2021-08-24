@@ -3,7 +3,6 @@ import { Typography,Toolbar, Link, Box,AppBar, Drawer } from '@material-ui/core'
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-// import { grey, orange } from "@material-ui/core/colors";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -95,7 +94,7 @@ export default function NavigationBar() {
 
     //MobileView Function
     const MobileView = () =>{
-        const [drawer,drawerSwitch] = useState(null)
+        const [drawer,drawerSwitch] = useState(null); //(!null ===true) weird Javascript
         const handleDrawer =() =>{
             drawerSwitch(!drawer);
         }
@@ -109,20 +108,21 @@ export default function NavigationBar() {
                 Insane systems 
                 </Typography>
                 <Drawer
-                open={drawer}
-                anchor="left"
-                onClose={handleDrawer}>
-                    {["home","courses","sign_up"].map((drawermenu) => (
-                    <Link 
-                    key={drawermenu}
-                    component="button"
-                    variant="body1"
-                     className={classes.menuitems}
-                    color='inherit'
-                    >
-                    {drawermenu.toUpperCase()}
-                    </Link>
-                ))}
+                    open={drawer}
+                    anchor="left"
+                    onClose={handleDrawer}>
+                        {["home","courses","sign_up"].map((drawermenu) => {
+                            return (
+                            <Link 
+                                key={drawermenu}
+                                component="button"
+                                variant="body1"
+                                className={classes.menuitems}
+                                color='inherit'
+                                >
+                                {drawermenu.toUpperCase()}
+                             </Link>);
+                        })}
                 </Drawer>
             </Toolbar>
             </>
