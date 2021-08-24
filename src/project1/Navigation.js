@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Typography,Toolbar, Link, Box,AppBar } from '@material-ui/core';
+import { Typography,Toolbar, Link, Box,AppBar, Drawer } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     menuitems:{
         
-         padding: theme.spacing(2),
+         padding: theme.spacing(3),
         // [theme.breakpoints.down("xs")] : {
         //     flexDirection:'column'
         // }
@@ -95,15 +95,35 @@ export default function NavigationBar() {
 
     //MobileView Function
     const MobileView = () =>{
+        const [drawer,drawerSwitch] = useState(null)
+        const handleDrawer =() =>{
+            drawerSwitch(!drawer);
+        }
         return(
             <>
             <Toolbar>
-                <IconButton edge='start' color='inherit' className={classes.menuButton}>
+                <IconButton edge='start' color='inherit' onClick={handleDrawer} className={classes.menuButton}>
                     <MenuIcon/>
                 </IconButton>
                 <Typography className={classes.title}>
                 Insane systems 
                 </Typography>
+                <Drawer
+                open={drawer}
+                anchor="left"
+                onClose={handleDrawer}>
+                    {["home","courses","sign_up"].map((drawermenu) => (
+                    <Link 
+                    key={drawermenu}
+                    component="button"
+                    variant="body1"
+                     className={classes.menuitems}
+                    color='inherit'
+                    >
+                    {drawermenu.toUpperCase()}
+                    </Link>
+                ))}
+                </Drawer>
             </Toolbar>
             </>
         )
