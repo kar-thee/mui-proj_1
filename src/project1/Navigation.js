@@ -100,20 +100,20 @@ export default function NavigationBar() {
         }
         return(
             <>
-            <Toolbar>
-                <IconButton edge='start' color='inherit' onClick={handleDrawer} className={classes.menuButton}>
-                    <MenuIcon/>
-                </IconButton>
-                <Typography className={classes.title}>
-                Insane systems 
-                </Typography>
-                <Drawer
-                    open={drawer}
-                    anchor="left"
-                    onClose={handleDrawer}>
-                        {["home","courses","sign_up"].map((drawermenu) => {
-                            return (
-                                <Box>
+                <Toolbar>
+                    <IconButton edge='start' color='inherit' onClick={handleDrawer} className={classes.menuButton}>
+                        <MenuIcon/>
+                    </IconButton>
+                    <Typography className={classes.title}>
+                    Insane systems 
+                    </Typography>
+                    <Drawer
+                        open={drawer}
+                        anchor="left"
+                        onClose={handleDrawer}>
+                            <Box>
+                                {["home","courses","sign_up"].map((drawermenu) => {
+                                    return (
                                     <MenuItem 
                                         key={drawermenu}
                                         component="button"
@@ -121,12 +121,11 @@ export default function NavigationBar() {
                                         // className={classes.menuitems}
                                         >
                                         {drawermenu.toUpperCase()}
-                                    </MenuItem>
-                                </Box>
-                            );
-                        })}
-                </Drawer>
-            </Toolbar>
+                                    </MenuItem>);
+                                })}
+                            </Box>
+                    </Drawer>
+                </Toolbar>
             </>
         )
     }
