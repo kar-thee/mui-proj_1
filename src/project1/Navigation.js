@@ -10,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',
-        [theme.breakpoints.down("xs")]:{
-            flexDirection:'column'
-        }
+        // [theme.breakpoints.down("xs")]:{
+        //     flexDirection:'column'
+        // } //now not necessary since used mobile view separately
     },
     title:{
         // padding: theme.spacing(1)
